@@ -5,208 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sunday Studio — Digital Downloads</title>
 <style>
-:root{color-scheme:light dark;--bg:light-dark(#fffaf6,#171412);--surface:light-dark(#ffffff,#211d1a);--surface2:light-dark(#f7efe8,#2b2521);--text:light-dark(#29231f,#f8f2ed);--muted:light-dark(#756b64,#bdb1a8);--accent:light-dark(#b96e50,#e49a78);--border:light-dark(#e8ddd5,#3b312b)}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
-button{font:inherit}
-#app{min-height:100vh;background:var(--bg)}
-.wrap{max-width:1100px;margin:auto;padding:0 24px}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
-.brand{font-family:Georgia,serif;font-size:24px;font-weight:700}
-.navlinks{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:14px}
-.navlinks a{color:inherit;text-decoration:none;cursor:pointer}
-.cart{border:1px solid var(--border);background:var(--surface);padding:9px 13px;border-radius:999px;cursor:pointer;color:var(--text)}
-.hero{padding:76px 0 62px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:12px;color:var(--accent);font-weight:700}
-.hero h1{font-family:Georgia,serif;font-size:clamp(45px,6vw,72px);line-height:.98;margin:15px 0 22px;letter-spacing:-.04em}
-.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:560px}
-.cta{display:flex;gap:12px;margin-top:28px}
-.primary,.secondary{border-radius:999px;padding:13px 20px;border:1px solid var(--border);cursor:pointer}
-.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
-.secondary{background:var(--surface);color:var(--text)}
-.mock{background:var(--surface2);border:1px solid var(--border);border-radius:28px;padding:24px;box-shadow:0 20px 50px #00000010}
-.paper{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;transform:rotate(2deg)}
-.paper h3{font-family:Georgia,serif;font-size:28px;margin:0 0 18px}
-.line{height:10px;border-radius:8px;background:var(--surface2);margin:11px 0}
-.small{width:65%}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
-.box{height:82px;border:1px solid var(--border);border-radius:12px;padding:12px;color:var(--muted);font-size:12px}
-.section{padding:45px 0 75px}
-.section h2{font-family:Georgia,serif;font-size:38px;margin:0 0 10px}
-.section-intro{color:var(--muted);margin:0 0 28px}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden}
-.thumb{height:180px;background:var(--surface2);padding:20px;display:flex;align-items:center;justify-content:center}
-.thumb-inner{background:var(--surface);width:70%;height:86%;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:0 10px 25px #00000008}
-.thumb-title{font-family:Georgia,serif;font-size:19px}
-.cardbody{padding:18px}
-.tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700}
-.card h3{margin:7px 0;font-family:Georgia,serif;font-size:22px}
-.card p{color:var(--muted);font-size:14px;line-height:1.5}
-.cardrow{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
-.price{font-weight:700}
-.buy{background:var(--text);color:var(--bg);border:0;border-radius:999px;padding:10px 14px;cursor:pointer}
-.banner{background:var(--surface2);border:1px solid var(--border);border-radius:25px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:25px}
-.banner h2{margin:0;font-family:Georgia,serif;font-size:30px}
-.banner p{color:var(--muted);margin-bottom:0}
-.footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
-.toast{position:fixed;right:20px;bottom:20px;background:var(--text);color:var(--bg);padding:13px 17px;border-radius:12px;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}
-.toast.show{opacity:1;transform:none}
-.modal{position:fixed;inset:0;background:#00000055;display:none;align-items:center;justify-content:center;padding:20px}
-.modal.open{display:flex}
-.modalbox{max-width:480px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:26px}
-.modalbox h2{font-family:Georgia,serif}
-.close{float:right;border:0;background:transparent;font-size:24px;color:var(--muted);cursor:pointer}
-@media(max-width:760px){.hero{grid-template-columns:1fr;gap:35px;padding-top:48px}.products{grid-template-columns:1fr}.navlinks a:not(.shoplink){display:none}.banner{display:block}.banner .primary{margin-top:18px}.footer{display:block}.footer span{display:block;margin-top:8px}}
+:root{color-scheme:light;--bg:#fff4f8;--surface:#fffdfd;--surface2:#ffe2ed;--text:#4b2436;--muted:#966b7e;--accent:#e96f9e;--border:#f2c4d6;--deep:#c94f82}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button{font:inherit}#app{min-height:100vh;background:radial-gradient(circle at 8% 4%,#ffd4e5 0,transparent 22%),radial-gradient(circle at 92% 12%,#ffe1ed 0,transparent 24%),var(--bg)}.wrap{max-width:1100px;margin:auto;padding:0 24px}.nav{height:80px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:relative}.nav:after{content:'♡';position:absolute;left:50%;transform:translateX(-50%);bottom:-10px;background:var(--bg);padding:0 10px;color:var(--accent);font-size:18px}.brand{font-family:Georgia,serif;font-size:26px;font-weight:700;color:var(--deep);letter-spacing:-.03em}.brand:before{content:'✦ ';font-size:15px}.navlinks{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:14px}.navlinks a{color:inherit;text-decoration:none;cursor:pointer}.cart{border:1px solid var(--border);background:var(--surface);padding:9px 14px;border-radius:999px;cursor:pointer;color:var(--text);box-shadow:0 5px 15px #d9789b18}.hero{padding:76px 0 62px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--accent);font-weight:800}.hero h1{font-family:Georgia,serif;font-size:clamp(45px,6vw,72px);line-height:.98;margin:15px 0 22px;letter-spacing:-.04em;color:#54253b}.hero h1:after{content:' ♡';color:var(--accent);font-size:.55em}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:560px}.cta{display:flex;gap:12px;margin-top:28px}.primary,.secondary{border-radius:999px;padding:13px 20px;border:1px solid var(--border);cursor:pointer}.primary{background:linear-gradient(135deg,#ed78a6,#d95d91);color:white;border-color:#e66c9d;box-shadow:0 10px 22px #e879a744}.secondary{background:var(--surface);color:var(--text);box-shadow:0 5px 15px #d9789b12}.mock{background:linear-gradient(145deg,#ffd8e7,#ffeef4);border:1px solid var(--border);border-radius:34px;padding:30px;box-shadow:0 24px 55px #d9789b25;position:relative}.mock:before,.mock:after{position:absolute;color:#e879a7;font-size:24px}.mock:before{content:'♡';top:14px;left:18px}.mock:after{content:'✦';right:18px;bottom:14px}.paper{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:27px;transform:rotate(2deg);box-shadow:0 12px 25px #d9789b18}.paper h3{font-family:Georgia,serif;font-size:28px;margin:0 0 18px;color:var(--deep)}.line{height:10px;border-radius:8px;background:var(--surface2);margin:11px 0}.small{width:65%}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}.box{height:82px;border:1px solid var(--border);border-radius:14px;padding:12px;color:var(--muted);font-size:12px;background:#fffafd}.section{padding:45px 0 75px}.section h2{font-family:Georgia,serif;font-size:38px;margin:0 0 10px;color:#54253b}.section h2:before{content:'✿ ';color:var(--accent);font-size:.7em}.section-intro{color:var(--muted);margin:0 0 28px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 14px 32px #d9789b14;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 20px 40px #d9789b22}.thumb{height:190px;background:linear-gradient(145deg,#ffe5ef,#ffd5e5);padding:22px;display:flex;align-items:center;justify-content:center;position:relative}.thumb:before{content:'♡';position:absolute;top:10px;left:15px;color:#e879a7;font-size:18px}.thumb:after{content:'✦';position:absolute;right:15px;bottom:10px;color:#e879a7;font-size:16px}.thumb-inner{background:var(--surface);width:70%;height:86%;border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:0 10px 25px #d9789b18}.thumb-title{font-family:Georgia,serif;font-size:19px;color:var(--deep)}.cardbody{padding:19px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:800}.card h3{margin:7px 0;font-family:Georgia,serif;font-size:22px;color:#54253b}.card p{color:var(--muted);font-size:14px;line-height:1.5}.cardrow{display:flex;align-items:center;justify-content:space-between;margin-top:16px}.price{font-weight:700;color:var(--deep)}.buy{background:#e96f9e;color:white;border:0;border-radius:999px;padding:10px 15px;cursor:pointer;box-shadow:0 6px 14px #e879a733}.banner{background:linear-gradient(135deg,#ffd7e7,#ffe9f1);border:1px solid var(--border);border-radius:28px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:25px;box-shadow:0 14px 35px #d9789b12}.banner h2{margin:0;font-family:Georgia,serif;font-size:30px;color:#54253b}.banner p{color:var(--muted);margin-bottom:0}.footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}.toast{position:fixed;right:20px;bottom:20px;background:#d95d91;color:white;padding:13px 17px;border-radius:14px;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none;box-shadow:0 8px 20px #d9789b33}.toast.show{opacity:1;transform:none}.modal{position:fixed;inset:0;background:#7c405955;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalbox{max-width:480px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:26px;padding:28px;box-shadow:0 25px 60px #7c405933}.modalbox h2{font-family:Georgia,serif;color:var(--deep)}.close{float:right;border:0;background:transparent;font-size:24px;color:var(--muted);cursor:pointer}@media(max-width:760px){.hero{grid-template-columns:1fr;gap:35px;padding-top:48px}.products{grid-template-columns:1fr}.navlinks a:not(.shoplink){display:none}.banner{display:block}.banner .primary{margin-top:18px}.footer{display:block}.footer span{display:block;margin-top:8px}}
 </style>
 </head>
 <body>
 <div id="app">
 <div class="wrap">
-<header class="nav">
-<div class="brand">Sunday Studio</div>
-<nav class="navlinks">
-<a onclick="scrollToShop()" class="shoplink">Shop</a>
-<a onclick="showAbout()">About</a>
-<button class="cart" onclick="showCart()">Bag <span id="count">0</span></button>
-</nav>
-</header>
-
+<header class="nav"><div class="brand">Sunday Studio</div><nav class="navlinks"><a onclick="scrollToShop()" class="shoplink">Shop</a><a onclick="showAbout()">About</a><button class="cart" onclick="showCart()">Bag <span id="count">0</span></button></nav></header>
 <main>
 <section class="hero">
-<div>
-<div class="eyebrow">Digital tools for calmer days</div>
-<h1>Make space for the life you actually want.</h1>
-<p>Simple, beautiful printable kits for planning, resetting, moving, studying and getting your life admin under control.</p>
-<div class="cta">
-<button class="primary" onclick="scrollToShop()">Browse the shop</button>
-<button class="secondary" onclick="showAbout()">How it works</button>
-</div>
-</div>
-
-<div class="mock">
-<div class="paper">
-<div class="eyebrow">Sunday reset</div>
-<h3>My week, made simple.</h3>
-<div class="line small"></div>
-<div class="line"></div>
-<div class="grid">
-<div class="box">Top 3 priorities</div>
-<div class="box">Things to remember</div>
-<div class="box">Meals + errands</div>
-<div class="box">One thing for me</div>
-</div>
-</div>
-</div>
+<div><div class="eyebrow">Digital tools for calmer days</div><h1>Make space for the life you actually want.</h1><p>Simple, beautiful printable kits for planning, resetting, moving, studying and getting your life admin under control.</p><div class="cta"><button class="primary" onclick="scrollToShop()">Browse the shop</button><button class="secondary" onclick="showAbout()">How it works</button></div></div>
+<div class="mock"><div class="paper"><div class="eyebrow">Sunday reset</div><h3>My week, made simple.</h3><div class="line small"></div><div class="line"></div><div class="grid"><div class="box">Top 3 priorities</div><div class="box">Things to remember</div><div class="box">Meals + errands</div><div class="box">One thing for me</div></div></div></div>
 </section>
-
-<section class="section" id="shop">
-<div class="eyebrow">The shop</div>
-<h2>Small tools, big difference.</h2>
-<p class="section-intro">Instant digital downloads. Design once, download whenever you need them.</p>
-<div class="products" id="products"></div>
-</section>
-
-<section class="section">
-<div class="banner">
-<div>
-<div class="eyebrow">Free starter</div>
-<h2>Try the 10-minute weekly reset.</h2>
-<p>A one-page checklist to get your week out of your head and onto paper.</p>
-</div>
-<button class="primary" onclick="freebie()">Get the free page</button>
-</div>
-</section>
+<section class="section" id="shop"><div class="eyebrow">The shop</div><h2>Small tools, big difference.</h2><p class="section-intro">Instant digital downloads. Design once, download whenever you need them.</p>
+<div class="products" id="products"></div></section>
+<section class="section"><div class="banner"><div><div class="eyebrow">Free starter</div><h2>Try the 10-minute weekly reset.</h2><p>A one-page checklist to get your week out of your head and onto paper.</p></div><button class="primary" onclick="freebie()">Get the free page</button></div></section>
 </main>
-
-<footer class="footer">
-<strong>Sunday Studio</strong>
-<span>Made with intention · Digital products only</span>
-</footer>
+<footer class="footer"><strong>Sunday Studio</strong><span>Made with intention · Digital products only</span></footer>
 </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
-<div class="modal" id="modal">
-<div class="modalbox">
-<button class="close" onclick="closeModal()">×</button>
-<div id="modalcontent"></div>
-</div>
-</div>
-
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalcontent"></div></div></div>
 <script>
 const products=[
-{name:'Sunday Reset Kit',tag:'Best seller',desc:'A 12-page reset system for clearing your head and preparing for the week.',price:'£4.99'},
-{name:'First Apartment Kit',tag:'Life admin',desc:'Moving checklists, room planning, starter shopping lists and monthly admin.',price:'£5.99'},
-{name:'Student Survival Pack',tag:'Study',desc:'Deadlines, exam planning, weekly study blocks and semester organisation.',price:'£4.49'}
+ {name:'Sunday Reset Kit',tag:'Best seller',desc:'A 12-page reset system for clearing your head and preparing for the week.',price:'£4.99'},
+ {name:'First Apartment Kit',tag:'Life admin',desc:'Moving checklists, room planning, starter shopping lists and monthly admin.',price:'£5.99'},
+ {name:'Student Survival Pack',tag:'Study',desc:'Deadlines, exam planning, weekly study blocks and semester organisation.',price:'£4.49'}
 ];
-
 let bag=0;
+function render(){document.getElementById('products').innerHTML=products.map((p,i)=>`<article class="card"><div class="thumb"><div class="thumb-inner"><div class="eyebrow">${p.tag}</div><div class="thumb-title">${p.name}</div><div class="line"></div><div class="line small"></div><div class="line"></div></div></div><div class="cardbody"><div class="tag">${p.tag}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="cardrow"><span class="price">${p.price}</span><button class="buy" onclick="add(${i})">Add to bag</button></div></div></article>`).join('')}
+function add(i){bag++;document.getElementById('count').textContent=bag;toast(products[i].name+' added to your bag');}
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
+function scrollToShop(){document.getElementById('shop').scrollIntoView({behavior:'smooth'})}
+function showAbout(){openModal('<h2>How Sunday Studio works</h2><p>Customers discover a useful idea on Pinterest, visit the shop, purchase a digital download, and receive the file instantly. This preview uses mock products and a simulated bag — a real store would connect the buttons to a payment and delivery service.</p>')}
+function showCart(){openModal('<h2>Your bag</h2><p>'+ (bag? 'You have '+bag+' item'+(bag>1?'s':'')+' in your bag.':'Your bag is empty.') +'</p><button class="primary" onclick="closeModal()">Continue shopping</button>')}
+function freebie(){const content=`SUNDAY STUDIO
 
-function render(){
-document.getElementById('products').innerHTML=products.map((p,i)=>`
-<article class="card">
-<div class="thumb">
-<div class="thumb-inner">
-<div class="eyebrow">${p.tag}</div>
-<div class="thumb-title">${p.name}</div>
-<div class="line"></div>
-<div class="line small"></div>
-<div class="line"></div>
-</div>
-</div>
-<div class="cardbody">
-<div class="tag">${p.tag}</div>
-<h3>${p.name}</h3>
-<p>${p.desc}</p>
-<div class="cardrow">
-<span class="price">${p.price}</span>
-<button class="buy" onclick="add(${i})">Add to bag</button>
-</div>
-</div>
-</article>`).join('')
-}
+10-MINUTE WEEKLY RESET
 
-function add(i){
-bag++;
-document.getElementById('count').textContent=bag;
-toast(products[i].name+' added to your bag');
-}
+☐ Brain dump: write down everything on your mind.
 
-function toast(t){
-const x=document.getElementById('toast');
-x.textContent=t;
-x.classList.add('show');
-setTimeout(()=>x.classList.remove('show'),1800)
-}
+☐ Top 3 priorities: choose the three things that matter most.
 
-function scrollToShop(){
-document.getElementById('shop').scrollIntoView({behavior:'smooth'})
-}
+☐ Quick tidy: pick one small area to reset.
 
-function showAbout(){
-openModal('<h2>How Sunday Studio works</h2><p>Customers discover a useful idea on Pinterest, visit the shop, purchase a digital download, and receive the file instantly. This preview uses mock products and a simulated bag — a real store would connect the buttons to a payment and delivery service.</p>')
-}
+☐ Week ahead: check your calendar and key dates.
 
-function showCart(){
-openModal('<h2>Your bag</h2><p>'+(bag?'You have '+bag+' item'+(bag>1?'s':'')+' in your bag.':'Your bag is empty.')+'</p><button class="primary" onclick="closeModal()">Continue shopping</button>')
-}
+☐ One thing for me: choose something kind or enjoyable.
 
-function freebie(){
-toast('Freebie download would start here');
-}
-
-function openModal(html){
-document.getElementById('modalcontent').innerHTML=html;
-document.getElementById('modal').classList.add('open')
-}
-
-function closeModal(){
-document.getElementById('modal').classList.remove('open')
-}
-
+♡ A little reset can make the week feel lighter.
+`;const blob=new Blob([content],{type:'text/plain'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='sunday-studio-10-minute-weekly-reset.txt';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);toast('Your free reset is downloading ♡');}
+function openModal(html){document.getElementById('modalcontent').innerHTML=html;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
 render();
 </script>
-</body>
-</html>
+</body></html>
